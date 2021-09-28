@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Enter email details</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="email" name="sender_email" id="from_adr" placeholder="sender_email">
+            <input type="email" name="receiver_email" id="to_adr" placeholder="receiver_email">
+            <input type="password" name="password" id="passw" placeholder="password">
+            <input type="number" name="year" id="year" placeholder="year">
+            <input type="number" name="month" id="month" placeholder="month">
+            <input type="number" name="date" id="date" placeholder="date">
+            <input type="number" name="hour" id="hour" placeholder="hour">
+            <input type="number" name="minute" id="minute" placeholder="minute">
+            <input type="number" name="sec" id="sec" placeholder="sec">
+
+</select>
+            <input type="submit" value="send">
+        </form>
+    </div>
+</div>
+{% endblock %}
